@@ -11,7 +11,7 @@ class Pokemon
   end
   
   def self.find(id, db)
-    pokemon_info=db.execute("SELECT * FROM pokemon WHERE id=#{id}")
+    pokemon_info=db.execute("SELECT * FROM pokemon WHERE id=#{id}")[0]
     pokemon_hash={id: pokemon_info[0],
                   name: pokemon_info[1],
                   type: pokemon_info[2],
