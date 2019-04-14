@@ -6,6 +6,6 @@ class Pokemon
    attributes.each {|key, value| self.send(("#{key}="), value)}
   end
   
-  def save
+  def self.save
   end
 end
