@@ -11,7 +11,7 @@ class Pokemon
   end
   
   def self.find(id, db)
-    test=db.execute("SELECT * FROM pokemon WHERE id=#{id}")
-    binding.pry
+    pokemon_info=db.execute("SELECT * FROM pokemon WHERE id=#{id}")
+    self.new(pokemon_info)
   end
 end
